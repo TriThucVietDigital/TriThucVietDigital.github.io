@@ -1,15 +1,15 @@
-/* style.css - Giao diện chuyên nghiệp + Dark Mode + Nút đẹp */
+/* style.css - Giao diện chuẩn hóa toàn bộ theo trang chủ */
 
 :root {
-  --bg-light: #f9f9f9;
-  --text-light: #333;
-  --header-bg: #007acc;
-  --nav-hover: #ffe600;
-  --content-bg: #fff;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --footer-bg: #f1f1f1;
+  --bg-light: #eef3f8;
+  --text-light: #2c3e50;
+  --header-bg: #0a5db6;
+  --nav-hover: #ffd700;
+  --content-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.06);
+  --footer-bg: #f0f0f0;
 
-  --bg-dark: #1f1f1f;
+  --bg-dark: #1c1c1c;
   --text-dark: #e0e0e0;
   --header-dark: #0a84ff;
   --nav-dark-hover: #ffcd00;
@@ -21,41 +21,47 @@ body {
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   background-color: var(--bg-light);
   color: var(--text-light);
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main {
-  max-width: 900px;
+  max-width: 960px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 20px;
   background: var(--content-bg);
-  box-shadow: 0 2px 6px var(--shadow);
-  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow);
+  border-radius: 12px;
 }
 
 header {
   background: var(--header-bg);
   color: white;
-  padding: 20px 0;
+  padding: 30px 20px 20px;
   text-align: center;
-  border-bottom: 4px solid #005fa3;
+  border-bottom: 5px solid #084e98;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: 5px;
+  font-size: 1.1rem;
+  color: #e0e0e0;
 }
 
 nav {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 nav a {
   color: white;
-  margin: 0 12px;
+  margin: 0 15px;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -70,50 +76,51 @@ article {
 }
 
 h1, h2, h3 {
-  color: #2c3e50;
+  color: var(--text-light);
   margin-top: 1.5em;
 }
 
 h2 {
-  border-bottom: 2px solid #eee;
-  padding-bottom: 0.3em;
+  border-left: 5px solid #007acc;
+  padding-left: 12px;
+  font-size: 1.4rem;
 }
 
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
   font-size: 1.05rem;
 }
 
 ul {
-  padding-left: 20px;
+  padding-left: 22px;
   margin-bottom: 1em;
 }
 
 ul li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
 }
 
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   background-color: var(--footer-bg);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #666;
-  margin-top: 40px;
-  border-top: 1px solid #ddd;
+  margin-top: 60px;
+  border-top: 1px solid #ccc;
 }
 
 #markdown-content {
-  padding: 30px;
+  padding: 20px 30px;
   font-size: 1.05rem;
 }
 
 /* Nút đẹp */
 .button {
   display: inline-block;
-  background: #007acc;
+  background: #0a5db6;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 22px;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
@@ -121,10 +128,10 @@ footer {
 }
 
 .button:hover {
-  background: #005fa3;
+  background: #09488f;
 }
 
-/* Dark mode tự động theo hệ điều hành */
+/* Dark mode tự động */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--bg-dark);
@@ -147,16 +154,23 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+/* Responsive cho di động */
+@media (max-width: 640px) {
   nav a {
     display: block;
     margin: 10px 0;
   }
   main {
     margin: 20px 10px;
-    padding: 10px;
+    padding: 15px;
   }
   article {
-    padding: 20px;
+    padding: 15px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
   }
 }
