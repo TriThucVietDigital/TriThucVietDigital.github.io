@@ -1,0 +1,162 @@
+/* style.css - Giao diện chuyên nghiệp + Dark Mode + Nút đẹp */
+
+:root {
+  --bg-light: #f9f9f9;
+  --text-light: #333;
+  --header-bg: #007acc;
+  --nav-hover: #ffe600;
+  --content-bg: #fff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --footer-bg: #f1f1f1;
+
+  --bg-dark: #1f1f1f;
+  --text-dark: #e0e0e0;
+  --header-dark: #0a84ff;
+  --nav-dark-hover: #ffcd00;
+  --content-dark: #2a2a2a;
+  --footer-dark: #111;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: var(--content-bg);
+  box-shadow: 0 2px 6px var(--shadow);
+  border-radius: 8px;
+}
+
+header {
+  background: var(--header-bg);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 4px solid #005fa3;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--nav-hover);
+}
+
+article {
+  padding: 30px;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-top: 1.5em;
+}
+
+h2 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.3em;
+}
+
+p {
+  margin-bottom: 1em;
+  font-size: 1.05rem;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--footer-bg);
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+#markdown-content {
+  padding: 30px;
+  font-size: 1.05rem;
+}
+
+/* Nút đẹp */
+.button {
+  display: inline-block;
+  background: #007acc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #005fa3;
+}
+
+/* Dark mode tự động theo hệ điều hành */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  header {
+    background: var(--header-dark);
+  }
+  main {
+    background: var(--content-dark);
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+  }
+  nav a:hover {
+    color: var(--nav-dark-hover);
+  }
+  footer {
+    background: var(--footer-dark);
+    color: #aaa;
+    border-top: 1px solid #333;
+  }
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  main {
+    margin: 20px 10px;
+    padding: 10px;
+  }
+  article {
+    padding: 20px;
+  }
+}
