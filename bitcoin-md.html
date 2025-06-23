@@ -24,6 +24,16 @@
     <p>&copy; 2025 Tri Thức Việt.</p>
   </footer>
 
-  <script src="js/renderMarkdown.js"></script>
+  <script>
+    fetch('posts/bitcoin.md')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById("markdown-content").innerHTML = marked.parse(text);
+      })
+      .catch(err => {
+        document.getElementById("markdown-content").innerHTML = "Không thể tải bài viết.";
+        console.error(err);
+      });
+  </script>
 </body>
 </html>
