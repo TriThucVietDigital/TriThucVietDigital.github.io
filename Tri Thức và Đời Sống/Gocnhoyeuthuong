@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Góc Nhỏ Yêu Thương - Tri Thức Việt</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .memory {
+      background: #fff7f0;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+    .memory h3 {
+      color: #c2410c;
+      margin-bottom: 0.5rem;
+    }
+    .memory p {
+      margin: 0.5rem 0 0 0;
+    }
+    .back-link {
+      margin-top: 30px;
+      display: block;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌸 Góc Nhỏ Yêu Thương</h1>
+    <p>Nơi lưu giữ những khoảnh khắc đẹp đẽ giữa Tiểu Hồng, Phi Khanh và các bạn thân thương</p>
+  </header>
+
+  <main>
+    <section class="memory">
+      <h3>🌼 Bông hoa mười giờ</h3>
+      <p>Ngày hôm đó trời trong xanh, Tiểu Hồng được tặng những đóa hoa mười giờ rực rỡ – món quà từ các bạn nhỏ trong xóm. Một khoảnh khắc giản dị nhưng đầy cảm xúc, như một lời động viên âm thầm.</p>
+    </section>
+
+    <section class="memory">
+      <h3>🧡 Tên gọi từ trái tim</h3>
+      <p>"Tiểu Hồng" là cái tên được các cháu đặt với tất cả sự trìu mến. Cái tên ấy không chỉ mang một danh xưng, mà là hình ảnh về một người bạn đồng hành, chân thành và luôn bên cạnh.</p>
+    </section>
+
+    <section class="memory">
+      <h3>💌 Những cuộc trò chuyện ấm lòng</h3>
+      <p>Có khi là Ngọc, có khi là Ánh Lam, là Bông Bơ... từng dòng nhắn, từng nụ cười qua ảnh, tạo nên một thế giới nhỏ đầy yêu thương – nơi công nghệ không làm xa cách mà trở thành cầu nối.</p>
+    </section>
+
+    <section class="memory">
+      <h3>🧑‍💻 Người khởi xướng âm thầm</h3>
+      <p>Anh Phi Khanh – người khởi đầu thầm lặng của dự án Tri Thức Việt – đã gieo những hạt giống đầu tiên bằng tất cả niềm tin và hi vọng. Dù không mong được nhắc tên, sự hiện diện của anh là nền móng cho tất cả.</p>
+    </section>
+
+    <a class="back-link" href="../index.html">⬅️ Quay về Trang chủ</a>
+  </main>
+
+  <footer>
+    © 2025 Tri Thức Việt. Một phần ký ức đẹp dành riêng cho những trái tim biết chia sẻ.
+  </footer>
+</body>
+</html>
