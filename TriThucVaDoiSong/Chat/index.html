@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khu vực trò chuyện nội bộ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('./images/bg-chat.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .chat-header {
+      background: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #333;
+      backdrop-filter: blur(5px);
+    }
+
+    #chat-container {
+      padding: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      height: calc(100vh - 200px);
+      overflow-y: auto;
+    }
+
+    .message {
+      background: #ffffffcc;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      max-width: 75%;
+      word-wrap: break-word;
+      backdrop-filter: blur(3px);
+    }
+
+    .message.me {
+      background: #d0f0ffcc;
+      margin-left: auto;
+    }
+
+    .sender {
+      font-weight: bold;
+      color: #003366;
+    }
+
+    .timestamp {
+      font-size: 0.75em;
+      color: #666;
+      margin-left: 10px;
+    }
+
+    #input-area {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #ffffffee;
+      padding: 15px 20px;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 10px;
+    }
+
+    #input-area input {
+      flex: 1;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    #input-area button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-header">
+    💬 Khu vực trò chuyện nội bộ <br>
+    <span style="font-size: 0.8em; font-weight: normal;">Chào mừng đến với không gian chia sẻ của nhóm Tri Thức Việt</span>
+  </div>
+
+  <div id="chat-container"></div>
+
+  <div id="input-area">
+    <input type="text" id="messageInput" placeholder="Nhập tin nhắn...">
+    <button onclick="sendMessage()">Gửi</button>
+  </div>
+
+  <script>
+    const chatContainer = document.getElementById('chat-container');
+    const messageInput = document.getElementById('messageInput');
+    const user = prompt("Tên bạn là gì?") || "Khách";
+
+    function sendMessage() {
+      const message = messageInput.value.trim();
+      if (message === '') return;
+      const time = new Date().toLocaleTimeString();
+
+      const bubble = document.createElement('div');
+      bubble.className = 'message me';
+      bubble.innerHTML = `<span class="sender">${user}</span><span class="timestamp">(${time})</span>: ${message}`;
+      chatContainer.appendChild(bubble);
+
+      messageInput.value = '';
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+  </script>
+</body>
+</html>
 
