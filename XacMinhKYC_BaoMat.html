@@ -16,16 +16,18 @@
         /* CSS cho thanh điều hướng và menu thả xuống */
         nav a, .dropbtn {
             color: white;
-            margin: 0 10px;
+            margin: 0 5px;
+            padding: 8px 15px;
             text-decoration: none;
             font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5); /* Thêm viền trắng mờ */
+            border-radius: 5px; /* Bo góc */
+            transition: background-color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
         }
 
         nav a:hover, .dropbtn:hover {
             background-color: rgba(255, 255, 255, 0.15);
+            border-color: white; /* Đổi màu viền khi rê chuột */
         }
 
         .dropdown {
@@ -40,7 +42,7 @@
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             border-top: none;
             border-radius: 0 0 5px 5px;
         }
@@ -68,10 +70,10 @@
         <p><strong>Chia sẻ kiến thức về tài sản kỹ thuật số & công nghệ Blockchain</strong></p>
 
         <nav style="margin-top: 15px;">
-            <a href="index.html" style="color: white; font-weight: bold; margin-right: 15px;">Trang chủ</a>
+            <a href="index.html">Trang chủ</a>
 
             <div class="dropdown">
-                <a href="sangiaodich.html" class="dropbtn" style="color: white; font-weight: bold; margin-right: 15px;">Sàn Giao Dịch Tiền Điện Tử</a>
+                <a href="sangiaodich.html" class="dropbtn">Sàn Giao Dịch Tiền Điện Tử</a>
                 <div class="dropdown-content">
                     <a href="mexc.html">MEXC GLOBAL</a>
                     <a href="binance.html">BINANCE</a>
@@ -79,13 +81,13 @@
             </div>
 
             <div class="dropdown">
-                <a href="tiendien-free.html" class="dropbtn" style="color: white; font-weight: bold; margin-right: 15px;">TIỀN ĐIỆN TỬ ĐẦU TƯ FREE</a>
+                <a href="tiendien-free.html" class="dropbtn">TIỀN ĐIỆN TỬ ĐẦU TƯ FREE</a>
                 <div class="dropdown-content">
                     <a href="pi-network.html">Pi Network</a>
                 </div>
             </div>
 
-            <a href="quan-diem-dinh-huong.html" style="color: white; font-weight: bold;">Quan điểm & Định hướng</a>
+            <a href="quan-diem-dinh-huong.html">Quan điểm & Định hướng</a>
         </nav>
     </header>
     <main>
