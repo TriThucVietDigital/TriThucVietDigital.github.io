@@ -5,44 +5,54 @@
   <title>Tri Thức Việt – Tiền điện tử là gì?</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
+ <style>
     /* CSS giống index.html */
     body { font-family:'Roboto', sans-serif; margin:0; padding:0; background:#f0f4f8; color:#333; }
     header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; }
-/* CSS cho menu thả xuống */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
-    nav a:hover { text-decoration:underline; }
     main { max-width:860px; margin:30px auto; background:#fff; padding:30px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
     footer { text-align:center; padding:15px; background:#e2e8f0; font-size:0.9em; color:#555; margin-top:20px; }
-  </style>
+
+    /* CSS cho thanh điều hướng và menu thả xuống */
+    nav a, .dropbtn {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover, .dropbtn:hover {
+        text-decoration: underline;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style> 
 </head>
 <body>
   <header>
