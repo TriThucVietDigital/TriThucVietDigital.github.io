@@ -9,6 +9,35 @@
     /* CSS giống index.html */
     body { font-family:'Roboto', sans-serif; margin:0; padding:0; background:#f0f4f8; color:#333; }
     header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; }
+/* CSS cho menu thả xuống */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
     nav a:hover { text-decoration:underline; }
     main { max-width:860px; margin:30px auto; background:#fff; padding:30px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
@@ -22,11 +51,25 @@
 
   <!-- Thanh điều hướng -->
   <nav style="margin-top: 15px;">
-  <a href="index.html" style="color: white; font-weight: bold; margin-right: 15px;">Trang chủ</a>
-  <a href="bitcoin-md.html" style="color: white; font-weight: bold; margin-right: 15px;">Bitcoin</a>
-  <a href="crypto.html" style="color: white; font-weight: bold; margin-right: 15px;">Tiền điện tử</a>
-  <a href="dinhhuong.html" style="color: white; font-weight: bold;">Quan điểm & Định hướng</a>
-</nav> 
+    <a href="index.html" style="color: white; font-weight: bold; margin-right: 15px;">Trang chủ</a>
+    
+    <div class="dropdown">
+        <a href="sangiaodich.html" class="dropbtn" style="color: white; font-weight: bold; margin-right: 15px;">Sàn Giao Dịch Tiền Điện Tử</a>
+        <div class="dropdown-content">
+            <a href="mexc.html">MEXC GLOBAL</a>
+            <a href="binance.html">BINANCE</a>
+        </div>
+    </div>
+    
+    <div class="dropdown">
+        <a href="tiendien-free.html" class="dropbtn" style="color: white; font-weight: bold; margin-right: 15px;">TIỀN ĐIỆN TỬ ĐẦU TƯ FREE</a>
+        <div class="dropdown-content">
+            <a href="pi-network.html">Pi Network</a>
+        </div>
+    </div>
+    
+    <a href="quan-diem-dinh-huong.html" style="color: white; font-weight: bold;">Quan điểm & Định hướng</a>
+</nav>
   </header>
   <main>
     <h2>💱 Tiền điện tử (Cryptocurrency) là gì?</h2>
